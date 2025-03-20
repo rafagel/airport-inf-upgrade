@@ -103,7 +103,7 @@
 							],
 							"outputs": [
 								{
-									"referenceName": "azuredb",
+									"referenceName": "AzureSqlTable1",
 									"type": "DatasetReference",
 									"parameters": {
 										"TableName": {
