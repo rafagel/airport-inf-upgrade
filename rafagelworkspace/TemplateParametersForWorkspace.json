@@ -1,0 +1,42 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"workspaceName": {
+			"value": "rafagelworkspace"
+		},
+		"AzureBlobStorage1_connectionString": {
+			"value": ""
+		},
+		"AzureSqlDatabase1_password": {
+			"value": ""
+		},
+		"RafagelLNKS_password": {
+			"value": ""
+		},
+		"rafagelworkspace-WorkspaceDefaultSqlServer_connectionString": {
+			"value": "Integrated Security=False;Encrypt=True;Connection Timeout=30;Data Source=tcp:rafagelworkspace.sql.azuresynapse.net,1433;Initial Catalog=@{linkedService().DBName}"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_server": {
+			"value": "rafagelworkspace.database.windows.net"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_database": {
+			"value": "master"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_userName": {
+			"value": "sqladminuser"
+		},
+		"RafagelLNKS_properties_typeProperties_server": {
+			"value": "rafagelserver.database.windows.net"
+		},
+		"RafagelLNKS_properties_typeProperties_database": {
+			"value": "airportDB"
+		},
+		"RafagelLNKS_properties_typeProperties_userName": {
+			"value": "sqladminuser"
+		},
+		"rafagelworkspace-WorkspaceDefaultStorage_properties_typeProperties_url": {
+			"value": "https://rafagelstorage.dfs.core.windows.net"
+		}
+	}
+}
