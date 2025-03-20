@@ -1,0 +1,50 @@
+{
+	"name": "Notebook 1",
+	"properties": {
+		"nbformat": 4,
+		"nbformat_minor": 2,
+		"sessionProperties": {
+			"driverMemory": "28g",
+			"driverCores": 4,
+			"executorMemory": "28g",
+			"executorCores": 4,
+			"numExecutors": 2,
+			"conf": {
+				"spark.dynamicAllocation.enabled": "false",
+				"spark.dynamicAllocation.minExecutors": "2",
+				"spark.dynamicAllocation.maxExecutors": "2",
+				"spark.autotune.trackingId": "2b6983a8-092a-4641-b134-0f3fd448516b"
+			}
+		},
+		"metadata": {
+			"saveOutput": true,
+			"enableDebugMode": false,
+			"kernelspec": {
+				"name": "synapse_pyspark",
+				"display_name": "python"
+			},
+			"language_info": {
+				"name": "python"
+			},
+			"sessionKeepAliveTimeout": 30
+		},
+		"cells": [
+			{
+				"cell_type": "code",
+				"source": [
+					"import csv\n",
+					"\n",
+					"file_path = \"airports.csv\"\n",
+					"expected_columns = 19\n",
+					"\n",
+					"with open(file_path, \"r\", encoding=\"utf-8\") as file:\n",
+					"    reader = csv.reader(file)\n",
+					"    for i, row in enumerate(reader, start=1):\n",
+					"        if len(row) != expected_columns:\n",
+					"            print(f\"Row {i} has {len(row)} columns instead of {expected_columns}: {row}\")"
+				],
+				"execution_count": null
+			}
+		]
+	}
+}
